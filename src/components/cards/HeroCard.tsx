@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { GlassCard } from "@/components/ui/GlassCard";
+import { CountUp } from "@/components/ui/CountUp";
 import { personal } from "@/data/portfolio";
 import { useEffect, useState } from "react";
 
@@ -56,9 +57,9 @@ const clipReveal = {
 };
 
 const stats = [
-  { value: "4+", label: "anos de\nexperiência" },
-  { value: "10+", label: "projetos\nentregues" },
-  { value: "94+", label: "modelos\nPrisma" },
+  { num: 4, suffix: "+", label: "anos de\nexperiência" },
+  { num: 10, suffix: "+", label: "projetos\nentregues" },
+  { num: 94, suffix: "+", label: "modelos\nPrisma" },
 ];
 
 export function HeroCard({ className }: { className?: string }) {
@@ -128,15 +129,18 @@ export function HeroCard({ className }: { className?: string }) {
           <div className="hidden md:flex w-40 flex-col justify-center gap-3 border-l border-white/6 p-5">
             {stats.map((s, i) => (
               <motion.div
-                key={s.value}
+                key={s.label}
                 initial={{ opacity: 0, x: 12 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.5 + i * 0.1, duration: 0.4, ease: [0.77, 0, 0.175, 1] }}
                 className="flex flex-col"
               >
-                <span className="font-display text-3xl font-extrabold gradient-text leading-none">
-                  {s.value}
-                </span>
+                <CountUp
+                  value={s.num}
+                  suffix={s.suffix}
+                  duration={1000}
+                  className="font-display text-3xl font-extrabold gradient-text leading-none"
+                />
                 <span className="font-mono text-xs text-white/55 mt-1 whitespace-pre-line leading-tight font-medium">
                   {s.label}
                 </span>

@@ -27,7 +27,8 @@ export function BentoGrid() {
     <motion.div
       variants={container}
       initial="hidden"
-      animate="show"
+      whileInView="show"
+      viewport={{ once: true }}
       className="grid grid-cols-1 gap-4 md:grid-cols-12"
     >
       {/* Row 1: Hero (7 cols) + About (5 cols) */}

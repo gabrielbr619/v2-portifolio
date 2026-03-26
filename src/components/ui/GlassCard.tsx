@@ -49,9 +49,18 @@ export function GlassCard({
   variants: customVariants,
   onClick,
 }: GlassCardProps) {
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    e.currentTarget.style.setProperty("--mouse-x", `${e.clientX - rect.left}px`);
+    e.currentTarget.style.setProperty("--mouse-y", `${e.clientY - rect.top}px`);
+  };
+
   return (
     <motion.div
       variants={customVariants ?? cardVariants}
+      whileInView="show"
+      initial="hidden"
+      viewport={{ once: true, margin: "-60px" }}
       whileHover={
         noHover
           ? undefined
@@ -63,10 +72,11 @@ export function GlassCard({
             }
       }
       transition={{ duration: 0.25, ease: [0.77, 0, 0.175, 1] }}
+      onMouseMove={noHover ? undefined : handleMouseMove}
       onClick={onClick}
       className={cn(
         strong ? "glass-strong" : "glass",
-        "card-shimmer gradient-border relative overflow-hidden",
+        "card-shimmer gradient-border spotlight relative overflow-hidden",
         onClick && "cursor-pointer",
         className
       )}
