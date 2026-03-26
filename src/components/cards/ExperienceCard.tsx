@@ -22,7 +22,7 @@ export function ExperienceCard({ className }: { className?: string }) {
   return (
     <GlassCard className={className} glowColor="rgba(37,99,235,0.2)" noHover>
       <div className="flex h-full flex-col p-6 md:p-8">
-        <p className="font-mono text-[10px] uppercase tracking-widest text-blue-light/60 mb-6">
+        <p className="font-display text-2xl font-extrabold text-blue-light/70 mb-6">
           Experiência
         </p>
 
@@ -61,7 +61,7 @@ export function ExperienceCard({ className }: { className?: string }) {
                 <div>
                   <div className="flex items-start justify-between gap-2 flex-wrap">
                     <div>
-                      <h3 className="font-display text-sm font-semibold text-white leading-snug">
+                      <h3 className="font-display text-base font-semibold text-white leading-snug">
                         {exp.role}
                       </h3>
                       {"companyUrl" in exp && exp.companyUrl ? (
@@ -77,12 +77,12 @@ export function ExperienceCard({ className }: { className?: string }) {
                         <p className="font-mono text-xs text-white/45">{exp.company}</p>
                       )}
                     </div>
-                    <span className="font-mono text-[10px] text-white/40 whitespace-nowrap">
+                    <span className="font-mono text-xs text-white/50 whitespace-nowrap">
                       {exp.period}
                     </span>
                   </div>
 
-                  <p className="mt-1.5 text-xs text-white/50 leading-relaxed">
+                  <p className="mt-1.5 text-sm text-white/55 leading-relaxed">
                     {exp.description}
                   </p>
 

@@ -64,7 +64,7 @@ export function AboutCard({ className }: { className?: string }) {
           <div className="flex gap-2">
             {journey.map((step, i) => (
               <div key={step.year} className="flex-1 flex flex-col gap-1.5">
-                <div className={`flex items-center gap-2 rounded-xl border px-3 py-3 ${step.color}`}>
+                <div className={`flex items-center gap-2 rounded-xl border px-3 py-3 select-none cursor-default ${step.color}`}>
                   {step.icon}
                   <div>
                     <p className="font-display text-sm font-bold leading-none">{step.label}</p>

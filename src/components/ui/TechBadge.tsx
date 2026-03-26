@@ -10,7 +10,7 @@ export function TechBadge({ children, size = "sm", accent = false }: TechBadgePr
   return (
     <span
       className={cn(
-        "inline-flex items-center rounded-full border font-mono font-medium whitespace-nowrap",
+        "inline-flex items-center rounded-full border font-mono font-medium whitespace-nowrap select-none cursor-default",
         size === "sm"
           ? "px-2.5 py-0.5 text-[11px]"
           : "px-3 py-1 text-xs",

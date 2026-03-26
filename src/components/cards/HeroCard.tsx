@@ -6,9 +6,10 @@ import { personal } from "@/data/portfolio";
 import { useEffect, useState } from "react";
 
 const phrases = [
-  "Construindo o futuro, um commit por vez.",
-  "Do banco de dados à interface.",
-  "Design + Código = Produto.",
+  "Transformo ideias complexas em produtos reais.",
+  "Do banco de dados à interface, sem intermediários.",
+  "Código limpo. Produto pensado. Entrega rápida.",
+  "SaaS do zero ao deploy — arquitetura inclusa.",
 ];
 
 function TypingText() {
@@ -73,12 +74,12 @@ export function HeroCard({ className }: { className?: string }) {
               {/* Available + location */}
               <div className="flex flex-wrap items-center gap-2 mb-5">
                 {personal.available && (
-                  <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/25 bg-emerald-500/10 px-3.5 py-1.5">
+                  <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/25 bg-emerald-500/10 px-3.5 py-1.5 select-none cursor-default">
                     <span className="pulse-dot h-2 w-2 rounded-full bg-emerald-400" />
                     <span className="font-mono text-xs font-medium text-emerald-400">Disponível para trabalhar</span>
                   </div>
                 )}
-                <div className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1.5">
+                <div className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 select-none cursor-default">
                   <svg viewBox="0 0 16 16" fill="none" className="w-3 h-3 text-white/50">
                     <path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6c0 3.5 4.5 8.5 4.5 8.5S12.5 9.5 12.5 6c0-2.5-2-4.5-4.5-4.5z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
                     <circle cx="8" cy="6" r="1.5" stroke="currentColor" strokeWidth="1.2"/>

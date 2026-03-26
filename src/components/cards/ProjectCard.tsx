@@ -56,10 +56,10 @@ export function ProjectCard({
         {/* Header */}
         <div className="flex items-start justify-between gap-2">
           <div className="flex-1 min-w-0">
-            <p className="font-mono text-[10px] uppercase tracking-widest text-white/40 mb-1">
+            <p className="font-mono text-xs uppercase tracking-widest text-white/50 mb-1">
               {tagline}
             </p>
-            <h3 className="font-display text-lg font-bold text-white leading-tight">
+            <h3 className="font-display text-xl font-bold text-white leading-tight">
               {name}
             </h3>
           </div>
@@ -67,13 +67,13 @@ export function ProjectCard({
 
         {/* Highlight badge */}
         {highlight && (
-          <div className={`mt-2 self-start inline-flex items-center rounded-full border px-2.5 py-1 font-mono text-[10px] font-medium ${highlightColor ?? "border-white/10 bg-white/5 text-white/50"}`}>
+          <div className={`mt-2 self-start inline-flex items-center rounded-full border px-2.5 py-1 font-mono text-xs font-medium select-none cursor-default ${highlightColor ?? "border-white/10 bg-white/5 text-white/50"}`}>
             {highlight}
           </div>
         )}
 
         {/* Description */}
-        <p className="mt-3 text-xs text-white/55 leading-relaxed flex-grow">
+        <p className="mt-3 text-sm text-white/60 leading-relaxed flex-grow">
           {description}
         </p>
 
@@ -101,7 +101,7 @@ export function ProjectCard({
               href={github}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-shrink-0 font-mono text-[10px] text-white/30 hover:text-white/70 transition-colors whitespace-nowrap"
+              className="flex-shrink-0 font-mono text-xs text-white/40 hover:text-white/70 transition-colors whitespace-nowrap"
             >
               GitHub ↗
             </a>

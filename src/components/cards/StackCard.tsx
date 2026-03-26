@@ -83,7 +83,7 @@ export function StackCard({ className }: { className?: string }) {
                 <motion.span
                   key={item.name}
                   variants={badgeItem}
-                  className={`stack-badge inline-flex items-center rounded-full border px-3 py-1 font-mono text-xs font-medium ${item.color}`}
+                  className={`stack-badge inline-flex items-center rounded-full border px-3 py-1 font-mono text-xs font-medium select-none cursor-default ${item.color}`}
                 >
                   {item.name}
                 </motion.span>
