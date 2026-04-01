@@ -3,6 +3,12 @@
 import { GlassCard } from "@/components/ui/GlassCard";
 import { personal } from "@/data/portfolio";
 
+const upworkIcon = (
+  <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+    <path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H8.5v7.217c0 1.211-.99 2.197-2.202 2.197-1.211 0-2.201-.986-2.201-2.197V3.492H1.601v7.217c0 2.715 2.208 4.923 4.923 4.923 2.715 0 4.924-2.208 4.924-4.923V9.49c.516 1.048 1.156 2.107 1.97 3.038l-1.677 7.868h2.406l1.212-5.697c1.073.67 2.286 1.019 3.587 1.019 3.629 0 6.177-2.549 6.177-5.868 0-3.325-2.548-5.832-6.162-5.832z"/>
+  </svg>
+);
+
 export function ContactCard({ className }: { className?: string }) {
   return (
     <GlassCard className={className} noHover>
@@ -33,6 +39,15 @@ export function ContactCard({ className }: { className?: string }) {
               {personal.email}
             </a>
             <a
+              href={personal.upwork}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group glass inline-flex items-center gap-2 rounded-full px-5 py-2.5 font-medium text-sm text-white/60 transition-all hover:border-white/20 hover:text-white"
+            >
+              {upworkIcon}
+              Upwork
+            </a>
+            <a
               href={personal.github}
               target="_blank"
               rel="noopener noreferrer"
@@ -60,7 +75,7 @@ export function ContactCard({ className }: { className?: string }) {
         {/* Footer */}
         <div className="mt-6 flex items-center justify-between border-t border-white/8 pt-4">
           <p className="font-mono text-[10px] text-white/30">
-            © 2025 Gabriel Lara
+            © 2026 Gabriel Lara
           </p>
           <p className="font-mono text-[10px] text-white/30">
             Santos · SP · Brasil

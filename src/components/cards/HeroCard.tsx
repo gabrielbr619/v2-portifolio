@@ -5,6 +5,7 @@ import { GlassCard } from "@/components/ui/GlassCard";
 import { CountUp } from "@/components/ui/CountUp";
 import { personal } from "@/data/portfolio";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const phrases = [
   "Transformo ideias complexas em produtos reais.",
@@ -57,9 +58,9 @@ const clipReveal = {
 };
 
 const stats = [
-  { num: 4, suffix: "+", label: "anos de\nexperiência" },
+  { num: 6, suffix: "+", label: "anos de\nexperiência" },
   { num: 10, suffix: "+", label: "projetos\nentregues" },
-  { num: 94, suffix: "+", label: "modelos\nPrisma" },
+  { num: 110, suffix: "+", label: "controllers\nREST" },
 ];
 
 export function HeroCard({ className }: { className?: string }) {
@@ -89,10 +90,15 @@ export function HeroCard({ className }: { className?: string }) {
                 </div>
               </div>
 
-              {/* Name */}
-              <h1 className="font-display font-extrabold leading-[0.93] tracking-tight text-4xl md:text-5xl lg:text-[3.5rem]">
-                <span className="gradient-text">{personal.name}</span>
-              </h1>
+              {/* Avatar + Name */}
+              <div className="flex items-center gap-4">
+                <div className="relative shrink-0 w-14 h-14 rounded-full overflow-hidden border border-white/10 ring-2 ring-purple-light/20">
+                  <Image src="/avatar.jpg" alt={personal.name} fill className="object-cover" />
+                </div>
+                <h1 className="font-display font-extrabold leading-[0.93] tracking-tight text-4xl md:text-5xl lg:text-[3.5rem]">
+                  <span className="gradient-text">{personal.name}</span>
+                </h1>
+              </div>
 
               <p className="mt-2.5 font-display text-base font-semibold text-white/65 md:text-lg">
                 {personal.title}

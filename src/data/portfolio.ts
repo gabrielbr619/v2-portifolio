@@ -3,11 +3,12 @@ export const personal = {
   title: "Desenvolvedor Full Stack Sênior",
   location: "Santos · SP",
   tagline: "Construo sistemas de ponta a ponta — do banco de dados à interface.",
-  bio: "Mais de 4 anos construindo sistemas web escaláveis. Comecei em design gráfico e migrei para desenvolvimento — o que me dá uma perspectiva única sobre produto. Hoje lidero o desenvolvimento de um SaaS enterprise para gestão de clínicas de saúde com IA, Stripe e integração com o padrão TISS da ANS.",
+  bio: "Mais de 6 anos construindo sistemas web escaláveis. Comecei em design gráfico e migrei para desenvolvimento — o que me dá uma perspectiva única sobre produto. Hoje lidero o desenvolvimento do High Tide Systems, um SaaS enterprise multi-tenant em produção para gestão de clínicas, com IA, Stripe e conformidade com o padrão TISS da ANS.",
   available: true,
   github: "https://github.com/gabrielbr619",
   linkedin: "https://www.linkedin.com/in/gabriel-lara-360408247/",
   email: "gabrielbr619@hotmail.com",
+  upwork: "https://www.upwork.com/freelancers/gabriellara",
 };
 
 export const stack = [
@@ -35,11 +36,11 @@ export const projects = [
     name: "High Tide Systems",
     tagline: "SaaS enterprise para gestão de clínicas",
     description:
-      "Plataforma multi-tenant completa para clínicas de saúde. Módulos de agendamento, prontuário clínico, RH, payroll, financeiro e inventário. IA conversacional (OpenAI/Groq/Ollama), WhatsApp via Evolution API, pagamentos com Stripe e conformidade com TISS da ANS.",
+      "SaaS multi-tenant construído do zero, atualmente em produção. Cobre 8+ módulos de negócio: agendamento multi-profissional, prontuário clínico (TISS/ANS), RH, payroll, financeiro, estoque, booking público e billing por assinatura. IA conversacional com OpenAI/Groq, integração WhatsApp via Evolution API e pagamentos com Stripe.",
     stats: [
-      { label: "modelos Prisma", value: "94+" },
-      { label: "containers Docker", value: "5" },
-      { label: "arquivos de código", value: "1.2k+" },
+      { label: "módulos de negócio", value: "8+" },
+      { label: "controllers REST", value: "110+" },
+      { label: "schemas Prisma", value: "20" },
     ],
     tech: ["Node.js", "Next.js", "TypeScript", "PostgreSQL", "Redis", "Docker", "Stripe", "Socket.io"],
     github: "https://github.com/gabrielbr619/high-tide-systems",
@@ -67,8 +68,8 @@ export const projects = [
     highlight: "15+ portais em 1 busca",
     highlightColor: "text-blue-light border-blue-light/20 bg-blue-light/8",
     description:
-      "Consolida anúncios de 15+ portais imobiliários brasileiros em tempo real. Scraper Python com deduplicação automática por hash, normalização de dados e API REST.",
-    stats: [{ value: "15+", label: "portais integrados" }, { value: "0", label: "duplicatas" }],
+      "Consolida anúncios de 15+ portais imobiliários brasileiros em uma única busca. Scraper Python com deduplicação automática por hash, normalização de dados heterogêneos e API REST para consumo no frontend.",
+    stats: [{ value: "15+", label: "portais integrados" }, { value: "1", label: "busca unificada" }],
     tech: ["Python", "Node.js", "Next.js", "PostgreSQL", "Docker"],
     github: "https://github.com/gabrielbr619/searchap",
     featured: false,
